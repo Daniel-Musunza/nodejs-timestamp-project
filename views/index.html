@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Timestamp Projects</title>
+    <link href="/style.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <h1>Timestamp Project</h1>
+    <hr />
+    <div class="container">
+      <ul>
+        <li><a href="#" onclick="fetchTimestamp('2015-12-25')">[project url]/api/2015-12-25</a></li>
+        <li><a href="#" onclick="fetchTimestamp('1451001600000')">[project url]/api/1451001600000</a></li>
+      </ul>
+
+      <h3>Example Output:</h3>
+      <p id="timestampResult"></p>
+    </div>
+    <div class="footer">
+      <p>
+        By <a href="https://musunzaportfolio.web.app/">Daniel-Musunza</a>
+      </p>
+    </div>
+
+    <script>
+      function fetchTimestamp(date) {
+        fetch(`/api/${date}`)
+          .then((response) => response.json())
+          .then((data) => {
+            const timestampResult = document.getElementById('timestampResult');
+            timestampResult.innerText = JSON.stringify(data);
+          })
+          .catch((error) => {
+            console.log('Error:', error);
+          });
+      }
+    </script>
+  </body>
+</html>

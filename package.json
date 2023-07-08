@@ -1,0 +1,28 @@
+{
+  "name": "timestamp-project",
+  "version": "0.0.1",
+  "description": "For freeCodeCamp Certification",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.12.4",
+    "cors": "^2.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Daniel-Musunza/nodejs-timestamp-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Daniel-Musunza/nodejs-timestamp-project/issues"
+  },
+  "homepage": "https://github.com/Daniel-Musunza/nodejs-timestamp-project#readme",
+  "author": "Daniel-Musunza",
+  "keywords": [
+    "node",
+    "express",
+    "freeCodeCamp"
+  ],
+  "license": "MIT"
+}
