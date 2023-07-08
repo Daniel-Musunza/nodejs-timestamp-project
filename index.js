@@ -15,10 +15,8 @@ app.get('/api/:date?', function (req, res) {
 
   if (!dateParam) {
     date = new Date();
-  } else if (/\D/.test(dateParam)) {
-    date = new Date(dateParam);
   } else {
-    date = new Date(parseInt(dateParam));
+    date = new Date(dateParam);
   }
 
   if (date.toString() === 'Invalid Date') {
